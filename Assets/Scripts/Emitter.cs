@@ -9,6 +9,9 @@ public class Emitter : MonoBehaviour
 	// 現在のWave
 	private int currentWave;
 
+	// Managerコンポーネント
+	private Manager manager;
+
 	IEnumerator Start ()
 	{
 
@@ -16,6 +19,9 @@ public class Emitter : MonoBehaviour
 		if (waves.Length == 0) {
 			yield break;
 		}
+
+		// Managerコンポーネントをシーン内から探して取得する
+		manager = FindObjectOfType<Manager>();
 
 		while (true) {
 
