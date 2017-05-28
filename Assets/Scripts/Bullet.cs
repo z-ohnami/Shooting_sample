@@ -6,6 +6,9 @@ public class Bullet : MonoBehaviour
 	// ゲームオブジェクト生成から削除するまでの時間
 	public float lifeTime = 5;
 
+	// 攻撃力
+	public int power = 1;
+
 	void Start ()
 	{
 		GetComponent<Rigidbody2D>().velocity = transform.up.normalized * speed;
